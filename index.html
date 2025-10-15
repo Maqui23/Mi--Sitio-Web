@@ -1,11 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora Completa</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculadora {
+            background-color: #222;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 330px;
+        }
+
+        .pantalla {
+            background-color: black;
+            color: #00ff99;
+            font-size: 26px;
+            text-align: right;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 10px;
+        }
+
+        .numeros {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .operadores {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            height: 60px;
+            font-size: 22px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .operador {
+            background-color: #f39c12;
+        }
+
+        .operador:hover {
+            background-color: #f1c40f;
+        }
+
+        .igual {
+            background-color: #27ae60;
+            grid-column: span 3;
+        }
+
+        .igual:hover {
+            background-color: #2ecc71;
+        }
+
+        .clear {
+            background-color: #e74c3c;
+        }
+
+        .clear:hover {
+            background-color: #ff6b6b;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="calculadora">
+        <input type="text" id="pantalla" class="pantalla" readonly>
+
+        <div class="contenedor">
+            <div class="numeros">
+                <button onclick="agregar('7')">7</button>
+                <button onclick="agregar('8')">8</button>
+                <button onclick="agregar('9')">9</button>
+
+                <button onclick="agregar('4')">4</button>
+                <button onclick="agregar('5')">5</button>
+                <button onclick="agregar('6')">6</button>
+
+                <button onclick="agregar('1')">1</button>
+                <button onclick="agregar('2')">2</button>
+                <button onclick="agregar('3')">3</button>
+
+                <button class="clear" onclick="borrarTodo()">C</button>
+                <button onclick="agregar('0')">0</button>
+                <button onclick="agregar('.')">.</button>
+
+                <button class="igual" onclick="calcular()">=</button>
+            </div>
+
+            <div class="operadores">
+                <button class="operador" onclick="agregar('+')">+</button>
+                <button class="operador" onclick="agregar('-')">−</button>
+                <button class="operador" onclick="agregar('*')">×</button>
+                <button class="operador" onclick="agregar('/')">÷</button>
+                <button onclick="borrarUno()">⌫</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function agregar(valor) {
+            document.querySelector("#pantalla").value += valor
+        }
+
+        function calcular() {
+            let pantalla = document.querySelector("#pantalla")
+            try {
+                pantalla.value = eval(pantalla.value)
+            } catch {
+                pantalla.value = "Error"
+            }
+        }
+
+        function borrarTodo() {
+            document.querySelector("#pantalla").value = ""
+        }
+
+        function borrarUno() {
+            let pantalla = document.querySelector("#pantalla")
+            pantalla.value = pantalla.value.slice(0, -1)
+        }
+    </script>
 </body>
 </html>
