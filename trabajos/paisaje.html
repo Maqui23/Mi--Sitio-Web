@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paisaje</title>
+    <style>
+        h1{
+            display: inline;
+            text-align: center;
+            text-decoration: underline;
+            border: 5px solid #ff0fff;
+        }
+        img{
+            padding: 10px;
+            border: 5px solid #008080;
+            float: left;
+            margin: 0 10px 10px 0;
+            width: 250px;
+        }
+         .Caja{
+            width: 200px;
+            float: left;
+         }
+         .col1{
+            box-shadow: 0px 0px 10px 5px aquamarine;
+         }
+         .col2{
+            box-shadow: 0px 0px 10px 5px red;
+         }
+         .col3{
+            box-shadow: 0px 0px 10px 5px greenyellow;
+         }
+         .computadora{
+            width: 320px;
+            height: 220px;
+            background: linear-gradient(145deg, #c0c0c0, #e8e8e8);
+            border: 4px solid #333;
+            border-radius: 10px;
+            margin: 40px auto 10px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+         }
+         .pantalla{
+            width: 280px;
+            height: 170px;
+            background: linear-gradient(to top, #6dd5fa, #2980b9);
+            border: 3px solid #222;
+            border-radius: 6px;
+            margin: 15px auto;
+            position: relative;
+            overflow: hidden;
+         }
+         .sol{
+            width: 40px;
+            height: 40px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            box-shadow: 0 0 30px 10px rgba(255,255,0,0.5);
+         }
+         .montana{
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-left: 80px solid transparent;
+            border-right: 80px solid transparent;
+            border-bottom: 80px solid #228B22;
+         }
+         .montana:nth-child(2){
+            left: 40px;
+         }
+         .montana:nth-child(3){
+            left: 120px;
+            border-bottom-color: #2e8b57;
+         }
+         .montana:nth-child(4){
+            left: 200px;
+            border-bottom-color: #006400;
+         }
+         .suelo{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 25px;
+            background: linear-gradient(to top, #3cb371, #2e8b57);
+         }
+         .soporte{
+            width: 40px;
+            height: 25px;
+            background: #555;
+            margin: 0 auto;
+            border-radius: 4px 4px 0 0;
+         }
+         .base{
+            width: 150px;
+            height: 15px;
+            background: #444;
+            border-radius: 4px;
+            margin: 5px auto;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+         }
+         .teclado{
+            width: 360px;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            align-items: center;
+            background: linear-gradient(to bottom, #999, #666);
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+         }
+         .fila{
+            display: grid;
+            grid-template-columns: repeat(22,12px);
+            gap: 4px;
+            justify-content: center;
+         }
+         .tecla{
+            width: 12px;
+            height: 12px;
+            background: #111;
+            border-radius: 2px;
+            box-shadow: 0 1px 1px rgba(255,255,255,0.2);
+         }
+         .espacio{
+            grid-column: span 10;
+            height: 12px;
+            background: #111;
+            border-radius: 2px;
+         }
+    </style>
+</head>
+<body>
+    <h1>PAISAJE</h1>
+    <img src="hola.jpg">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quos maxime laborum et saepe consequuntur voluptate sit molestiae distinctio ab id, a architecto facere dolorem officiis quasi placeat quod eius minima possimus quae. Sunt porro distinctio ut dolore facere aperiam consequatur accusantium, cupiditate ullam earum quo tenetur eum fugiat consectetur dicta. Provident omnis soluta recusandae ea veniam! Labore at unde impedit aspernatur corporis quis mollitia? Natus saepe, quia doloribus repellat modi error vitae ipsam delectus. Vel ad illo asperiores in inventore qui, porro, placeat beatae culpa reiciendis quis? Suscipit debitis facilis quas soluta pariatur. Laboriosam voluptatibus eaque debitis odit expedita excepturi nobis. Similique quae nulla ipsum earum aut temporibus magni, dolores delectus eum consectetur? Libero possimus deleniti tenetur, quod earum accusantium laboriosam tempore autem tempora repudiandae omnis facere commodi numquam modi animi veniam consequuntur labore laudantium corrupti sed dicta magnam maxime nemo. Vitae debitis voluptatum soluta ipsa, magni enim sit impedit quos. Nostrum consectetur nam in magni. Quia ipsam expedita facere molestiae quae odit vero sequi dignissimos perferendis temporibus maxime, in tempora doloremque accusamus placeat quidem, excepturi repudiandae repellendus sed officia eaque! Quo, illo quidem. Illum quis facilis itaque harum delectus! Officia eius nobis eligendi soluta quidem vitae tempore quis!</p>
+    <div class="Caja col1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores officiis architecto dolores repellat, molestiae r porro a incidunt laboriosam reiciendis? Nihil, porro totam! A, saepe porro.
+    </div>
+        <div class="Caja col2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum est vero architecto, eos sed, mollitia dignissimos dolorem maxime odit quis modi! Perferendis at soluta illum.
+    </div>
+    <div class="Caja col3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam natus eos quo voluptatum ex provident quae porro nulla labore, perferendis dolor officia aspernatur, unde harum!
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="computadora">
+        <div class="pantalla">
+            <div class="sol"></div>
+            <div class="montana"></div>
+            <div class="montana"></div>
+            <div class="montana"></div>
+            <div class="suelo"></div>
+        </div>
+    </div>
+    <div class="soporte"></div>
+    <div class="base"></div>
+    <div class="teclado">
+        <div class="fila">
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div>
+        </div>
+        <div class="fila">
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div>
+        </div>
+        <div class="fila">
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div><div class="tecla"></div><div class="tecla"></div>
+          <div class="tecla"></div>
+        </div>
+        <div class="fila">
+          <div class="espacio"></div>
+        </div>
+    </div>
+</body>
+</html>
