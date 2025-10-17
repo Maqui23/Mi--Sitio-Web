@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,19 +12,51 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .card img {
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card-img-top {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-
         h2 {
             color: #0d6efd;
+        }
+
+        .card {
+            border-radius: 15px;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 85%;
+            height: auto;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .card-body {
+            flex: 1.2;
+        }
+
+        .card-body h5 {
+            font-weight: 600;
+            color: #0d6efd;
+        }
+
+        .card-body p {
+            color: #6c757d;
+        }
+
+        .btn-custom {
+            padding: 10px 25px;
+            border-radius: 8px;
+        }
+
+        .image-container {
+            flex: 1;
+            background-color: #f8f9fa;
+        }
+
+        .d-flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -37,16 +69,19 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                 <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="about.html">Sobre mí</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="projects.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="projects.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Proyectos
                         </a>
                         <ul class="dropdown-menu bg-primary border-0 shadow" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-white" href="#trabajos">Trabajos</a></li>
                             <li><a class="dropdown-item text-white" href="#ejercicios">Ejercicios</a></li>
-                            <li><hr class="dropdown-divider bg-light"></li>
+                            <li>
+                                <hr class="dropdown-divider bg-light">
+                            </li>
                             <li><a class="dropdown-item text-white" href="projects.html">Ver todos los proyectos</a></li>
                         </ul>
                     </li>
@@ -60,51 +95,56 @@
         <h2 class="text-center mb-4">Mis Proyectos y Trabajos</h2>
         <div class="row g-4">
 
+            <!-- Calculadora -->
             <div class="col-md-6">
-                <div class="card shadow-sm d-flex flex-row align-items-center" style="overflow: hidden;">
-                    <div style="flex: 1; text-align: center; background-color: #fff;">
-                        <img src="calc.jpg" alt="Proyecto Calculadora"
-                            style="width: 100%; height: 200px; object-fit: contain;">
+                <div class="card shadow-lg d-flex flex-row align-items-center">
+                    <div class="image-container d-flex-center">
+                        <img src="calc.jpg" alt="Proyecto Calculadora">
                     </div>
-                    <div class="card-body" style="flex: 1.2;">
+                    <div class="card-body">
                         <h5 class="card-title">Calculadora</h5>
                         <p class="card-text">
                             Aplicación simple hecha con HTML, CSS y JavaScript que realiza operaciones básicas.
                         </p>
-                        <a href="trabajos/calculadora.html" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                        <a href="trabajos/calculadora.html" target="_blank"
+                            class="btn btn-outline-primary btn-custom">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
 
-
-            <div class="col-md-4">
-                <div class="d-flex justify-content-center align-items-center"
-                    style="height:220px; background-color:#fff;">
-                    <img src="comp.png" class="card-img-top" alt="Proyecto CSS">
+            <!-- Diseño con CSS -->
+            <div class="col-md-6">
+                <div class="card shadow-lg d-flex flex-row align-items-center">
+                    <div class="image-container d-flex-center">
+                        <img src="comp.png" alt="Proyecto CSS">
+                    </div>
                     <div class="card-body">
                         <h5 class="card-title">Diseño con CSS</h5>
-                        <p class="card-text">Página web creada con diferentes estilos y efectos visuales usando CSS.</p>
-                        <a href="trabajos/paisaje.html" target="_blank" class="btn btn-primary">Ver Proyecto</a>
+                        <p class="card-text">
+                            Página web creada con diferentes estilos y efectos visuales usando CSS.
+                        </p>
+                        <a href="trabajos/paisaje.html" target="_blank"
+                            class="btn btn-outline-primary btn-custom">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
 
+            <!-- Ejercicio JavaScript -->
             <div class="col-md-6">
-                <div class="card shadow-sm d-flex flex-row align-items-center" style="overflow: hidden;">
-                    <div style="flex: 1; text-align: center; background-color: #fff;">
-                        <img src="image.png" alt="Ejercicio JavaScript"
-                            style="width: 100%; height: 200px; object-fit: contain;">
+                <div class="card shadow-lg d-flex flex-row align-items-center">
+                    <div class="image-container d-flex-center">
+                        <img src="image.png" alt="Ejercicio JavaScript">
                     </div>
-                    <div class="card-body" style="flex: 1.2;">
+                    <div class="card-body">
                         <h5 class="card-title">Ejercicio JavaScript</h5>
                         <p class="card-text">
                             Ejemplo interactivo usando eventos y manipulación del DOM con JavaScript.
                         </p>
-                        <a href="ejercicios/ejercicio_js.html" target="_blank" class="btn btn-primary">Ver Ejercicio</a>
+                        <a href="ejercicios/ejercicio_js.html" target="_blank"
+                            class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
                     </div>
                 </div>
             </div>
-
 
         </div>
     </section>
