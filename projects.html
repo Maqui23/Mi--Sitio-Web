@@ -58,6 +58,13 @@
             justify-content: center;
             align-items: center;
         }
+
+        .section-title {
+            margin-top: 60px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #0d6efd;
+        }
     </style>
 </head>
 
@@ -72,17 +79,13 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="about.html">Sobre mí</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="projects.html" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle active" href="projects.html" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Proyectos
                         </a>
                         <ul class="dropdown-menu bg-primary border-0 shadow" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-white" href="#trabajos">Trabajos</a></li>
                             <li><a class="dropdown-item text-white" href="#ejercicios">Ejercicios</a></li>
-                            <li>
-                                <hr class="dropdown-divider bg-light">
-                            </li>
-                            <li><a class="dropdown-item text-white" href="projects.html">Ver todos los proyectos</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
@@ -91,58 +94,251 @@
         </div>
     </nav>
 
-    <section class="container mt-5">
-        <h2 class="text-center mb-4">Mis Proyectos y Trabajos</h2>
+    <section id="trabajos" class="container mt-5">
+        <h2 class="section-title">Trabajos</h2>
         <div class="row g-4">
-
-            <!-- Calculadora -->
             <div class="col-md-6">
                 <div class="card shadow-lg d-flex flex-row align-items-center">
                     <div class="image-container d-flex-center">
-                        <img src="calc.jpg" alt="Proyecto Calculadora">
+                        <img src="img/calc.jpg" alt="Proyecto Calculadora">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Calculadora</h5>
-                        <p class="card-text">
-                            Aplicación simple hecha con HTML, CSS y JavaScript que realiza operaciones básicas.
-                        </p>
+                        <p class="card-text">Aplicación hecha con HTML, CSS y JavaScript que realiza operaciones
+                            básicas.</p>
                         <a href="trabajos/calculadora.html" target="_blank"
                             class="btn btn-outline-primary btn-custom">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Diseño con CSS -->
             <div class="col-md-6">
                 <div class="card shadow-lg d-flex flex-row align-items-center">
                     <div class="image-container d-flex-center">
-                        <img src="comp.png" alt="Proyecto CSS">
+                        <img src="img/comp.png" alt="Proyecto CSS">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Diseño con CSS</h5>
-                        <p class="card-text">
-                            Página web creada con diferentes estilos y efectos visuales usando CSS.
-                        </p>
-                        <a href="trabajos/paisaje.html" target="_blank"
-                            class="btn btn-outline-primary btn-custom">Ver Proyecto</a>
+                        <p class="card-text">Página web creada aplicando estilos, colores y fondos personalizados con
+                            CSS.</p>
+                        <a href="trabajos/paisaje.html" target="_blank" class="btn btn-outline-primary btn-custom">Ver
+                            Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ejercicios" class="container mt-5">
+        <h2 class="section-title">Ejercicios</h2>
+
+        <ul class="nav nav-tabs justify-content-center" id="exerciseTabs">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#css">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#js">JavaScript</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#bootstrap">Bootstrap</a></li>
+        </ul>
+
+        <div class="tab-content mt-4">
+            <div class="tab-pane fade show active" id="html">
+                <div class="row g-4">
+                    <div class="col-md-6" *ngFor="let i of [1,2,3,4]">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/html.svg" alt="Ejercicio HTML">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio HTML</h5>
+                                <p class="card-text">Estructura básica de página web con etiquetas HTML.</p>
+                                <a href="ejercicios/html01.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Ejercicio JavaScript -->
-            <div class="col-md-6">
-                <div class="card shadow-lg d-flex flex-row align-items-center">
-                    <div class="image-container d-flex-center">
-                        <img src="image.png" alt="Ejercicio JavaScript">
+            <div class="tab-pane fade" id="css">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/css.png" alt="Ejercicio CSS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 1</h5>
+                                <p class="card-text">Uso de colores, bordes, márgenes y estilos avanzados.</p>
+                                <a href="ejercicios/flex1.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Ejercicio JavaScript</h5>
-                        <p class="card-text">
-                            Ejemplo interactivo usando eventos y manipulación del DOM con JavaScript.
-                        </p>
-                        <a href="ejercicios/ejercicio_js.html" target="_blank"
-                            class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/css.png" alt="Ejercicio CSS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 2</h5>
+                                <p class="card-text">Práctica de animaciones, transiciones y efectos visuales.</p>
+                                <a href="ejercicios/flex2.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/css.png" alt="Ejercicio CSS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio 3</h5>
+                                <p class="card-text">Uso de layouts flexibles y diseño adaptativo.</p>
+                                <a href="ejercicios/flex3.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="js">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/image.png" alt="Ejercicio JS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio JS 01</h5>
+                                <p class="card-text">Interactividad y manipulación del DOM.</p>
+                                <a href="ejercicios/ejercicio_js1.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/image.png" alt="Ejercicio JS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio JS 02</h5>
+                                <p class="card-text">Uso de funciones y manejo de eventos en el navegador.</p>
+                                <a href="ejercicios/ejercicio_js2.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/image.png" alt="Ejercicio JS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio JS 03</h5>
+                                <p class="card-text">Manipulación dinámica de elementos HTML.</p>
+                                <a href="ejercicios/ejercicio_js3.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/image.png" alt="Ejercicio JS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio JS 04</h5>
+                                <p class="card-text">Condicionales, bucles y lógica aplicada a formularios.</p>
+                                <a href="ejercicios/ejercicio_js4.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/image.png" alt="Ejercicio JS">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio JS 05</h5>
+                                <p class="card-text">Interacción con el usuario y validaciones básicas.</p>
+                                <a href="ejercicios/ejercicio_js5.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="bootstrap">
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/boot.png" alt="Ejercicio Bootstrap 1">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio Bootstrap 1</h5>
+                                <p class="card-text">Diseño responsivo utilizando el sistema de grillas de Bootstrap.
+                                </p>
+                                <a href="ejercicios/boot01.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/boot.png" alt="Ejercicio Bootstrap 2">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio Bootstrap 2</h5>
+                                <p class="card-text">Uso de componentes visuales como botones, cards y alertas.</p>
+                                <a href="ejercicios/boot02.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/boot.png" alt="Ejercicio Bootstrap 3">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio Bootstrap 3</h5>
+                                <p class="card-text">Aplicación de estilos con utilidades y tipografía de Bootstrap.</p>
+                                <a href="ejercicios/boot03.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-lg d-flex flex-row align-items-center">
+                            <div class="image-container d-flex-center">
+                                <img src="img/boot.png" alt="Ejercicio Bootstrap 4">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Ejercicio Bootstrap 4</h5>
+                                <p class="card-text">Creación de una página web moderna con diseño adaptativo.</p>
+                                <a href="ejercicios/boot04.html" target="_blank"
+                                    class="btn btn-outline-primary btn-custom">Ver Ejercicio</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
